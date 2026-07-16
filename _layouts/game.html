@@ -2,6 +2,7 @@
 layout: default
 ---
 <div class="container py-5">
+  <!-- タイトルとタグ -->
   <h1 class="fw-bold mb-3">{{ page.title }}</h1>
   <div class="mb-4">
     {% for tag in page.tags %}
@@ -9,11 +10,48 @@ layout: default
     {% endfor %}
   </div>
 
+  <!-- ↓↓ここから画像スライダー（カルーセル）↓↓ -->
+  {% if page.screenshot_count and page.screenshot_count > 0 %}
+  <div id="gameCarousel" class="carousel slide mb-5 shadow-sm rounded overflow-hidden bg-dark" data-bs-ride="carousel">
+    
+    <!-- 下部のドット（インジケーター） -->
+    <div class="carousel-indicators">
+      {% for i in (1..page.screenshot_count) %}
+      <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% endif %}"></button>
+      {% endfor %}
+    </div>
+
+    <!-- 画像本体のループ -->
+    <div class="carousel-inner">
+      {% for i in (1..page.screenshot_count) %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}">
+        <!-- 高さを400pxに固定し、画像が見切れないように object-fit: contain を指定 -->
+        <img src="{{ site.baseurl }}/{{ page.screenshot_base }}{{ i }}{{ page.screenshot_ext }}" class="d-block w-100" alt="Screenshot {{ i }}" style="height: 400px; object-fit: contain;">
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- 左右の矢印ボタン -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    
+  </div>
+  {% endif %}
+  <!-- ↑↑カルーセルここまで↑↑ -->
+
+  <!-- Markdownの本文 -->
   <div class="content bg-white p-4 rounded shadow-sm border">
     {{ content }}
   </div>
 
+  <!-- トップへ戻るボタン -->
   <div class="mt-4">
-    <a href="{{ '/' | relative_url }}" class="btn btn-outline-secondary">← トップページに戻る</a>
+    <a href="{{ site.baseurl }}/" class="btn btn-outline-secondary">← トップページに戻る</a>
   </div>
 </div>
