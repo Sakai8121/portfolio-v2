@@ -6,7 +6,7 @@ summary: "連鎖爆発で設計図を強化して挑む、Google PlayおよびUn
 thumbnail: "assets/images/games/UnbelievableAntKingdom_thumbnail.png"
 period: "約1年半 (大学3年〜4年初頭)"
 role: "チーム制作 (メインプログラマー / 企画)"
-tags: ["Unity", "C#", "Google Play Console", "Firebase"]
+tags: ["Unity", "C#", "Google Play Console", "Firebase", "Addressable", "asmdef"]
 screenshot_base: "assets/images/games/UnbelievableAntKingdom_"
 screenshot_count: 11
 screenshot_ext: ".png"
