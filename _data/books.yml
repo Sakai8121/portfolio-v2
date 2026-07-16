@@ -29,14 +29,14 @@
 
 - title: "3Dゲームを面白くする技術"
   author: "大野 功二"
-  status: "reading"
+  status: "read"
   cover: "assets/images/books/3Dゲームを面白くする技術.jpg"
   comment: |
     実例から様々なゲームメカニクスを知ることができた。遊んだことがあるゲームもあったが、そんな仕組みがあったのか！と驚くこともあり、勉強になった。
 
 - title: "Game Programming Patterns"
   author: "Robert Nystrom, 武舎広幸 他"
-  status: "reading"
+  status: "read"
   cover: "assets/images/books/Game Programming Patterns.jpg"
   comment: |
     デザインパターンが実際にどのような場面で使われるのかが書かれていて分かりやすかった。特にデータの局所化の話は印象的で、この本を読んでECSについて調べるようになった。
