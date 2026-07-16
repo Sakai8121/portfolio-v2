@@ -1,8 +1,8 @@
 ---
 layout: game
 title: "フルスピードで走るのが犬の人生だった"
-order: 110
-summary: "小学生をターゲットとしたUX設計と、座標・物理のハイブリッド挙動ランゲーム（文化祭出展作）"
+order: 70
+summary: "小学生をターゲットとしたUX設計と、座標・物理のハイブリッド挙動ランゲーム（3年時文化祭出展作）"
 thumbnail: "assets/images/games/フルスピードで走るのが犬の人生だった_thumbnail.png"
 period: "1か月 (大学3年 冬)"
 role: "ソロ制作"
