@@ -29,6 +29,14 @@
       padding: 60px 0;
       border-bottom: 1px solid #dee2e6;
     }
+
+    /* カードの画像を統一された高さで綺麗に収めるスタイル */
+    .card-img-top {
+      width: 100%;
+      height: 200px;             /* カード内の画像エリアの高さを200pxに固定 */
+      object-fit: contain;       /* 画像を一切見切れさせずに全体を枠内に収める */
+      background-color: #e9ecef;  /* 画像の左右（または上下）にできる余白を明るいグレーで塗りつぶす */
+    }
   </style>
 </head>
 <body>
