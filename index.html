@@ -54,19 +54,31 @@ title: Home
   <div class="container">
     <h2 class="fw-bold mb-4">開発実績 <span class="fs-5 text-muted fw-normal">（注力順）</span></h2>
     <div class="row g-4">
-      {% for game in site.games %}
+      {% assign sorted_games = site.games | sort: "order" %}
+      {% for game in sorted_games %}
       <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm border-0">
           <img src="{{ game.thumbnail | default: 'assets/images/placeholder.png' | relative_url }}" class="card-img-top" alt="{{ game.title }}">
+          
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title fw-bold">{{ game.title }}</h5>
-            <p class="card-text text-muted flex-grow-1">{{ game.summary }}</p>
+            <h5 class="card-title fw-bold mb-2">{{ game.title }}</h5>
+            <p class="card-text text-muted small flex-grow-1">{{ game.summary }}</p>
+            
             <div class="mb-3">
               {% for tag in game.tags %}
               <span class="badge bg-secondary me-1">{{ tag }}</span>
               {% endfor %}
             </div>
-            <a href="{{ site.baseurl }}{{ game.url }}" class="btn btn-primary mt-auto">詳細を見る</a>
+            
+            <div class="d-grid gap-2 mt-auto">
+              <a href="{{ game.url | relative_url }}" class="btn btn-primary btn-sm">詳細を見る</a>
+              
+              {% if game.primary_url %}
+              <a href="{{ game.primary_url }}" target="_blank" class="btn btn-outline-secondary btn-sm">
+                {{ game.primary_label | default: "Play" }}
+              </a>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
