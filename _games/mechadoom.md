@@ -2,7 +2,7 @@
 layout: game
 title: "MECHADOOM"
 order: 30
-summary: "圧倒的な敵の包囲網を破壊する爽快感と戦略性を描く、BitSummit GameJamゲームデザイン賞受賞 3Dメカアクション"
+summary: "圧倒的な敵の包囲網を破壊する爽快感と戦略性、BitSummit GameJamゲームデザイン賞受賞 3Dメカアクション"
 thumbnail: "assets/images/games/MECHADOOM_thumbnail.png"
 period: "3～4か月 (大学3年 夏)"
 role: "チーム制作 (メインプログラマー / 企画)"
