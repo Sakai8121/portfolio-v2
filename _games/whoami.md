@@ -1,7 +1,7 @@
 ---
 layout: game
 title: "Who am I"
-order: 90
+order: 110
 summary: "アハ体験をデザイン、Unity1Weekお題「あい」参加作品"
 thumbnail: "assets/images/games/WhoamI_thumbnail.png"
 period: "1週間 (Unity1Week)"
